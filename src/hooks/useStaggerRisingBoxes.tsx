@@ -1,5 +1,5 @@
 import { stagger, useAnimate } from "framer-motion";
-import { FunctionComponent, PropsWithChildren, useEffect } from "react";
+import { PropsWithChildren, useEffect } from "react";
 
 export const useStaggerRisingBoxes = () => {
   const [scope, animate] = useAnimate();
@@ -10,11 +10,11 @@ export const useStaggerRisingBoxes = () => {
       {
         duration: 1,
         delay: stagger(1, { startDelay: 0.15 }),
-      }
+      },
     );
   }, [animate]);
   const BoxWrapper = ({ children }: PropsWithChildren) => (
-    <div className="rising-box opacity-0 translate-y-full">{children}</div>
+    <div className="rising-box translate-y-full opacity-0">{children}</div>
   );
   return [scope, BoxWrapper] as const;
 };
