@@ -1,40 +1,25 @@
 "use client";
-import { skillsData } from "@/data";
-import { cn } from "@/lib/utils";
-import { TSkillCategory } from "@/types/Skill";
-import { MouseEventHandler, useState } from "react";
+import {
+  SkillCategories,
+  SkillDetail,
+  SkillsOfSelectedCategory,
+} from "./_components/skill";
+import { SelectedSkillContextProvider } from "./_components/skill/contexts/selected-skill";
+import { SelectedSkillCategoryContextProvider } from "./_components/skill/contexts/selected-skill-category";
 
 const Skills = () => {
-  const [selectedSkillCategory, setSelectedSkillCategory] =
-    useState<TSkillCategory | null>(null);
-  const handleClick = (skillCategory: TSkillCategory) => {
-    if (selectedSkillCategory === skillCategory) setSelectedSkillCategory(null);
-    else setSelectedSkillCategory(skillCategory);
-  };
   return (
-    <div className="flex">
-      <div>
-        {selectedSkillCategory !== null &&
-          skillsData
-            .filter((skill) => skill.category === selectedSkillCategory)[0]
-            .skills.map((skill) => <div key={skill.name}>{skill.name}</div>)}
-      </div>
-      <div className="">
-        {skillsData.map((skill) => (
-          <div key={skill.category}>
-            <div
-              className={cn(
-                "flex justify-end",
-                selectedSkillCategory === skill.category && "font-semibold",
-              )}
-              onClick={() => handleClick(skill.category)}
-            >
-              {skill.category}
-            </div>
+    <SelectedSkillCategoryContextProvider>
+      <SelectedSkillContextProvider>
+        <div className="flex h-full w-full items-end justify-end">
+          <div className="flex flex-col">
+            <SkillsOfSelectedCategory />
+            <SkillCategories />
           </div>
-        ))}
-      </div>
-    </div>
+          <SkillDetail />
+        </div>
+      </SelectedSkillContextProvider>
+    </SelectedSkillCategoryContextProvider>
   );
 };
 
