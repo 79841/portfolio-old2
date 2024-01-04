@@ -15,7 +15,9 @@ export const SkillDetail = () => {
         name={selectedSkill.name}
         proficiency={selectedSkill.proficiency}
       />
-      <div></div>
+      <div className="my-2 flex w-96 justify-center text-sm">
+        {selectedSkill.proficiencyDetail}
+      </div>
     </div>
   );
 };
