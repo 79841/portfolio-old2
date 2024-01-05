@@ -3,6 +3,7 @@ import { Inter } from "next/font/google";
 import "./globals.css";
 import { Navigator } from "./_components/navigation";
 import { Header } from "./_components/header";
+import { ThemeProvider } from "./_components/theme-mode/ThemeProvider";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -19,15 +20,19 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={inter.className}>
-        <div className="h-screen w-screen p-8">
-          <div className="flex h-full w-full flex-col rounded-lg border border-black p-8">
-            <div className="fixed z-50">
-              <Header />
-              <Navigator />
+        <ThemeProvider attribute="class" enableSystem disableTransitionOnChange>
+          <div className="h-screen w-screen p-8">
+            <div className="flex h-full w-full flex-col border border-primary p-8">
+              <div className="fixed z-50">
+                <Header />
+                <Navigator />
+              </div>
+              <div className="flex flex-1 items-end justify-end">
+                {children}
+              </div>
             </div>
-            <div className="flex flex-1 items-end justify-end">{children}</div>
           </div>
-        </div>
+        </ThemeProvider>
       </body>
     </html>
   );
