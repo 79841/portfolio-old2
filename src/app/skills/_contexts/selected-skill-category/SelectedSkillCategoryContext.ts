@@ -1,3 +1,4 @@
+"use client";
 import { TSkillCategory } from "@/types/Skill";
 import { createContext, useContext } from "react";
 

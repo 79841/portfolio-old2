@@ -4,7 +4,8 @@ import { TSkillCategory } from "@/types/Skill";
 import {
   useSelectedSkillCategoryContext,
   useSelectedSkillCategoryDispatchContext,
-} from "./contexts/selected-skill-category";
+} from "../../_contexts/selected-skill-category";
+import { SelectedMark } from "@/components/selected-mark";
 
 type TSkillCategoryProps = {
   skillCategory: TSkillCategory;
@@ -30,7 +31,9 @@ export const SkillCategory = ({ skillCategory }: TSkillCategoryProps) => {
         )}
         onClick={handleClick}
       >
-        {skillCategory.name}
+        <SelectedMark isSelected={isSelected}>
+          {skillCategory.name}
+        </SelectedMark>
       </div>
     </div>
   );

@@ -1,6 +1,6 @@
 import { skillsData } from "@/data";
 import React from "react";
-import { useSelectedSkillCategoryContext } from "./contexts/selected-skill-category";
+import { useSelectedSkillCategoryContext } from "../../_contexts/selected-skill-category";
 import { TSkillCategory } from "@/types/Skill";
 import { SkillList } from "./SkillList";
 

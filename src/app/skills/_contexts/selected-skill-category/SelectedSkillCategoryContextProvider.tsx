@@ -1,3 +1,4 @@
+"use client";
 import { TSkillCategory } from "@/types/Skill";
 import React, { PropsWithChildren, useReducer } from "react";
 import {

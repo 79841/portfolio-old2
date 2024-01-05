@@ -1,15 +1,16 @@
 "use client";
 import React from "react";
-import { useSelectedSkillContext } from "./contexts/selected-skill";
+import { useSelectedSkillContext } from "../../_contexts/selected-skill";
 import { ImageBox } from "@/components/image-box";
 import { ProficiencyBar } from "@/components/proficiency-bar";
+import { DetailBox } from "@/components/detail-box";
 
 export const SkillDetail = () => {
   const selectedSkill = useSelectedSkillContext();
   if (selectedSkill === null) return null;
 
   return (
-    <div className="absolute left-[50%] top-[50%] flex -translate-x-[50%] -translate-y-[50%] flex-col items-center justify-center gap-2">
+    <DetailBox>
       <ImageBox src={selectedSkill.defaultImage} alt={selectedSkill.name} />
       <ProficiencyBar
         name={selectedSkill.name}
@@ -18,6 +19,6 @@ export const SkillDetail = () => {
       <div className="my-2 flex w-96 justify-center text-sm">
         {selectedSkill.proficiencyDetail}
       </div>
-    </div>
+    </DetailBox>
   );
 };
