@@ -1,4 +1,4 @@
-import { TExperienceData } from "@/types/ExperienceData";
+import { TExperienceData } from "@/types/Experience";
 
 export const experiencesData: TExperienceData[] = [
   {

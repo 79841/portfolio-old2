@@ -1,5 +1,4 @@
 import { TSkillCategory } from "@/types/Skill";
-import { projectsData } from "./projectsData";
 
 export const skillsData: TSkillCategory[] = [
   {

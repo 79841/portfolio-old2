@@ -1,4 +1,4 @@
-import { TProjectData } from "@/types/ProjectData";
+import { TProjectData } from "@/types/Project";
 
 export const projectsData: TProjectData[] = [
   {
