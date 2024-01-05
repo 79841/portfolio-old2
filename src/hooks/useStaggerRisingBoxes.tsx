@@ -6,7 +6,7 @@ export const useStaggerRisingBoxes = () => {
   useEffect(() => {
     animate(
       ".rising-box",
-      { opacity: 1, transform: "translateY(0)" },
+      { opacity: [0, 1], transform: "translateY(0)" },
       {
         duration: 1,
         delay: stagger(1, { startDelay: 0.15 }),
@@ -14,7 +14,7 @@ export const useStaggerRisingBoxes = () => {
     );
   }, [animate]);
   const BoxWrapper = ({ children }: PropsWithChildren) => (
-    <div className="rising-box translate-y-full opacity-0">{children}</div>
+    <div className="rising-box translate-y-ful">{children}</div>
   );
   return [scope, BoxWrapper] as const;
 };
