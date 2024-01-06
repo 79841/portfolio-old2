@@ -1,9 +1,9 @@
 "use client";
 import React from "react";
 import { useSelectedSkillContext } from "../../_contexts/selected-skill";
-import { ImageBox } from "@/components/image-box";
 import { ProficiencyBar } from "@/components/proficiency-bar";
 import { DetailBox } from "@/components/detail-box";
+import { SkillImage } from "./SkillImage";
 
 export const SkillDetail = () => {
   const selectedSkill = useSelectedSkillContext();
@@ -11,7 +11,7 @@ export const SkillDetail = () => {
 
   return (
     <DetailBox>
-      <ImageBox src={selectedSkill.defaultImage} alt={selectedSkill.name} />
+      <SkillImage skill={selectedSkill} />
       <ProficiencyBar
         name={selectedSkill.name}
         proficiency={selectedSkill.proficiency}
