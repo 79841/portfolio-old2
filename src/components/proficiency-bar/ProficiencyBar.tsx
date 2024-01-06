@@ -7,7 +7,7 @@ export const ProficiencyBar = ({ name, proficiency }: TProficiencyBarProps) => {
     <div>
       <div className="flex justify-end text-xs">proficiency</div>
       <div className="relative w-32">
-        <div className="h-1 w-full border border-black bg-transparent"></div>
+        <div className="h-1 w-full border border-primary bg-transparent"></div>
         <div
           className={"absolute left-0 top-0"}
           style={{ width: `${proficiency}%` }}
