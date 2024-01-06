@@ -3,8 +3,9 @@ export type TProjectData = {
   description: string;
   content: string;
   techStack: string[];
+  link: string;
   date: string;
-  images?: string[];
+  images: string[];
   demo?: string;
   github?: string[];
 };
