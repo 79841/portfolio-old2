@@ -22,12 +22,12 @@ export default function RootLayout({
       <body className={inter.className}>
         <ThemeProvider attribute="class" enableSystem disableTransitionOnChange>
           <div className="h-screen w-screen p-8">
-            <div className="flex h-full w-full flex-col border border-primary p-8">
-              <div className="fixed z-50">
+            <div className="flex h-full w-full border border-primary p-8">
+              <div className="w-fit">
                 <Header />
                 <Navigator />
               </div>
-              <div className="flex flex-1 items-end justify-end">
+              <div className="flex flex-[1] items-end justify-end">
                 {children}
               </div>
             </div>
