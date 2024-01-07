@@ -18,7 +18,6 @@ export const Experience = ({ experience }: TExperienceProps) => {
   const handleClick: MouseEventHandler<HTMLSpanElement> = () => {
     if (isSelected) unselectExperience();
     else {
-      console.log(experience);
       selectExperience(experience);
     }
   };
