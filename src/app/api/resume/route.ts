@@ -10,12 +10,12 @@ export async function GET() {
       siteMetadata.resumeFileName,
     ),
   );
-  const formData = new FormData();
-  formData.append(
-    siteMetadata.resumeFileName,
-    new Blob([buffer]),
-    siteMetadata.resumeFileName,
-  );
+  // const formData = new FormData();
+  // formData.append(
+  //   siteMetadata.resumeFileName,
+  //   new Blob([buffer]),
+  //   siteMetadata.resumeFileName,
+  // );
   const headers = new Headers();
   headers.append(
     "Content-Disposition",
@@ -23,7 +23,7 @@ export async function GET() {
   );
   headers.append("Content-Type", "application/pdf; charset=utf-8");
 
-  return new Response(formData, {
+  return new Response(buffer, {
     headers,
   });
 }

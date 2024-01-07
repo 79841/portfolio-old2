@@ -4,7 +4,7 @@ import React from "react";
 
 export const ResumeDownLink = () => {
   return (
-    <Link href={"/api/file"} download={siteMetadata.resumeFileName}>
+    <Link href={"/api/resume"} download={siteMetadata.resumeFileName}>
       Download Resume
     </Link>
   );
