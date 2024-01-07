@@ -3,7 +3,6 @@ import { TextHighlighter } from "@/components/text-highlighter";
 import { projectsData } from "@/data";
 import React from "react";
 import { ProjectDetail } from "../_components/project";
-import { useRouter } from "next/navigation";
 
 const SecurityGymPage = () => {
   const project = projectsData.securityGym;
@@ -13,7 +12,7 @@ const SecurityGymPage = () => {
         <ProjectDetail.Title title={project.name} />
         <ProjectDetail.Description description={project.description} />
       </ProjectDetail.Header>
-      <ProjectDetail.Images images={project.images} />
+      <ProjectDetail.Images images={project.images} imageWidth="100%" />
       <ProjectDetail.Content>
         <div>
           기업에 침해사고 발생시{" "}

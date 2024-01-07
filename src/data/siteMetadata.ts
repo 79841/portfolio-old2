@@ -17,6 +17,6 @@ export const siteMetadata = {
   username: "LEtMeDEv",
   language: "ko",
   locale: "ko_KR",
-  profilePrimary: "/images/profile/profile-primary.avif",
+  profilePrimary: "/images/profile/profile.avif",
   profileSecondary: "/images/profile/profile-secondary.avif",
 };

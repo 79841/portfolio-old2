@@ -58,6 +58,11 @@ const config = {
         md: "calc(var(--radius) - 2px)",
         sm: "calc(var(--radius) - 4px)",
       },
+      boxShadow: {
+        x: "8px 0 15px -3px rgba(0, 0, 0, 0.1), -8px 0 15px -3px rgba(0, 0, 0, 0.1)",
+        bottom:
+          "0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06)",
+      },
       keyframes: {
         "accordion-down": {
           from: { height: "0" },
@@ -71,11 +76,16 @@ const config = {
           from: { width: "0" },
           to: { width: "100%" },
         },
+        "show-up": {
+          from: { opacity: "0" },
+          to: { opacity: "1" },
+        },
       },
       animation: {
         "accordion-down": "accordion-down 0.2s ease-out",
         "accordion-up": "accordion-up 0.2s ease-out",
         "increase-right": "increase-right 0.5s ease-out",
+        "show-up": "0.5s linear 0.5s 1 forwards show-up",
       },
     },
   },
