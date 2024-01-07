@@ -8,7 +8,7 @@ import { cn } from "@/lib/utils";
 export const Navigator = () => {
   const [isVisible, setIsVisible] = useState(false);
 
-  const handleClick: MouseEventHandler<HTMLButtonElement> = () => {
+  const handleClick: MouseEventHandler = () => {
     setIsVisible((prev) => !prev);
   };
   return (
@@ -28,7 +28,11 @@ export const Navigator = () => {
         )}
       >
         {Object.values(navigationLinks).map((navInfo) => (
-          <NavigationLink key={navInfo.name} {...navInfo} />
+          <NavigationLink
+            key={navInfo.name}
+            {...navInfo}
+            onClick={handleClick}
+          />
         ))}
       </nav>
     </div>
