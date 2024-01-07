@@ -13,5 +13,6 @@ export const SkillsOfSelectedCategory = () => {
             skillCategory.name === selectedSkillCategory,
         )[0]
       : { name: null, skills: [] };
-  return <>{skills.length > 0 && <SkillList key={name} skills={skills} />}</>;
+  if (skills.length > 0) return null;
+  return <SkillList key={name} skills={skills} />;
 };

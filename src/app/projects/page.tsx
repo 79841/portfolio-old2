@@ -2,9 +2,9 @@ import { ProjectList } from "./_components/project";
 
 const Projects = () => {
   return (
-    <div>
+    <main>
       <ProjectList />
-    </div>
+    </main>
   );
 };
 
