@@ -1,5 +1,5 @@
 "use client";
-import React, { useEffect } from "react";
+import React from "react";
 import { IntroPhrase } from "./IntroPhrase";
 import { introPhrases } from "./constants";
 import { useStaggerRisingBoxes } from "@/hooks/useStaggerRisingBoxes";

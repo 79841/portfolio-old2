@@ -1,7 +1,5 @@
-import { navigationLinks, siteMetadata } from "@/data";
 import React from "react";
 import { ThemeModeChanger } from "../theme-mode/ThemeModeChanger";
-import Link from "next/link";
 import { ResumeDownLink } from "./ResumeDownLink";
 import { Navigator } from "../navigation";
 import { Logo } from "./Logo";
