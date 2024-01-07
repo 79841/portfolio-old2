@@ -14,7 +14,7 @@ export const Navigator = () => {
   return (
     <div
       className={cn(
-        "absolute right-0 z-50 flex flex-col items-end pr-4 lg:static lg:right-8 lg:items-start lg:pr-0",
+        "absolute right-0 z-50 flex flex-col items-end lg:static lg:right-8 lg:items-start",
         isVisible && "w-[calc(100%)] bg-background ",
       )}
     >
