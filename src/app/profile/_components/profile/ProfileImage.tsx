@@ -3,7 +3,7 @@ import Image from "next/image";
 
 export const ProfileImage = () => {
   return (
-    <div className="relative h-60 w-60 animate-show-up opacity-0">
+    <div className="relative h-60 w-60 animate-show-up">
       <Image
         src={siteMetadata.profilePrimary}
         alt="profile"
