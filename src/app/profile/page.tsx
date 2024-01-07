@@ -9,9 +9,6 @@ const ProfilePage = () => {
   const [scope, BoxWrapper] = useStaggerShowUpBoxes();
   return (
     <div className="flex">
-      {/* <div className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2"> */}
-
-      {/* </div> */}
       <div ref={scope} className="mr-4 flex flex-col items-end justify-between">
         <BoxWrapper>{siteMetadata.name}</BoxWrapper>
         <BoxWrapper>{siteMetadata.university}</BoxWrapper>
@@ -38,7 +35,7 @@ const ProfilePage = () => {
 
 const ProfileImage = () => {
   return (
-    <div className="animate-show-up relative h-60 w-60 opacity-0">
+    <div className="relative h-60 w-60 animate-show-up opacity-0">
       <Image
         src={siteMetadata.profilePrimary}
         alt="profile"
