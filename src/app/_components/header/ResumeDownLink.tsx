@@ -4,7 +4,11 @@ import React from "react";
 
 export const ResumeDownLink = () => {
   return (
-    <Link href={"/api/resume"} download={siteMetadata.resumeFileName}>
+    <Link
+      href={siteMetadata.resumePath}
+      download={siteMetadata.resumePath.split("/").at(-1)}
+      target="_blank"
+    >
       Download Resume
     </Link>
   );
