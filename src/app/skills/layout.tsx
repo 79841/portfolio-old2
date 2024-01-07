@@ -6,11 +6,7 @@ type TSkillsPageLayoutProps = PropsWithChildren;
 const SkillsPageLayout = ({ children }: TSkillsPageLayoutProps) => {
   return (
     <SelectedSkillCategoryContextProvider>
-      <SelectedSkillContextProvider>
-        <div className="flex h-full w-full items-end justify-end">
-          {children}
-        </div>
-      </SelectedSkillContextProvider>
+      <SelectedSkillContextProvider>{children}</SelectedSkillContextProvider>
     </SelectedSkillCategoryContextProvider>
   );
 };

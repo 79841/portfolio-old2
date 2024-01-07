@@ -7,18 +7,22 @@ import { SkillImage } from "./SkillImage";
 
 export const SkillDetail = () => {
   const selectedSkill = useSelectedSkillContext();
-  if (selectedSkill === null) return null;
+  const isVisible = selectedSkill !== null;
 
   return (
     <DetailBox>
-      <SkillImage skill={selectedSkill} />
-      <ProficiencyBar
-        name={selectedSkill.name}
-        proficiency={selectedSkill.proficiency}
-      />
-      <div className="my-2 flex w-96 justify-center text-sm">
-        {selectedSkill.proficiencyDetail}
-      </div>
+      {isVisible && (
+        <>
+          <SkillImage skill={selectedSkill} />
+          <ProficiencyBar
+            name={selectedSkill.name}
+            proficiency={selectedSkill.proficiency}
+          />
+          <div className="my-2 flex justify-center text-sm">
+            {selectedSkill.proficiencyDetail}
+          </div>
+        </>
+      )}
     </DetailBox>
   );
 };

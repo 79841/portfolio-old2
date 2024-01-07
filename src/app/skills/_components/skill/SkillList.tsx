@@ -9,7 +9,10 @@ type TSkillListProps = {
 export const SkillList = ({ skills }: TSkillListProps) => {
   const [scope, BoxWrapper] = useStaggerShowUpBoxes(0.2, 0.1);
   return (
-    <div ref={scope} className="my-4 flex flex-col items-end">
+    <div
+      ref={scope}
+      className="flex flex-[1] flex-col justify-end lg:my-4 lg:items-end lg:justify-start"
+    >
       {skills.map((skill) => (
         <BoxWrapper key={skill.name}>
           <Skill skill={skill} />

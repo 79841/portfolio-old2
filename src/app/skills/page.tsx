@@ -7,13 +7,13 @@ import {
 
 const Skills = () => {
   return (
-    <>
-      <div className="flex flex-col">
+    <div className="flex h-full w-full flex-col justify-between lg:justify-end">
+      <SkillDetail />
+      <div className="flex w-full justify-end lg:flex-col ">
         <SkillsOfSelectedCategory />
         <SkillCategories />
       </div>
-      <SkillDetail />
-    </>
+    </div>
   );
 };
 
