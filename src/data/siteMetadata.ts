@@ -4,6 +4,7 @@ export const siteMetadata = {
   socialBanner: "/images/twitter-card.png",
   siteUrl: "https://79841.github.io",
   name: "명인지",
+  profession: "FE Developer",
   university: "서울과학기술대학교",
   major: "산업정보시스템",
   doubleMajor: "컴퓨터공학",
