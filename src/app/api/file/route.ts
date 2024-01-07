@@ -11,7 +11,11 @@ export async function GET() {
     ),
   );
   const formData = new FormData();
-  formData.append("file", new Blob([buffer]), siteMetadata.resumeFileName);
+  formData.append(
+    siteMetadata.resumeFileName,
+    new Blob([buffer]),
+    siteMetadata.resumeFileName,
+  );
   const headers = new Headers();
   headers.append(
     "Content-Disposition",
