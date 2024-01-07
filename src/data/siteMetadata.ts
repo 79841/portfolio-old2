@@ -19,4 +19,6 @@ export const siteMetadata = {
   locale: "ko_KR",
   profilePrimary: "/images/profile/profile.avif",
   profileSecondary: "/images/profile/profile-secondary.avif",
+  resumePath: "public/docs",
+  resumeFileName: "명인지_이력서.pdf",
 };

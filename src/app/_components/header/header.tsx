@@ -2,6 +2,7 @@ import { navigationLinks, siteMetadata } from "@/data";
 import React from "react";
 import { ThemeModeChanger } from "../theme-mode/ThemeModeChanger";
 import Link from "next/link";
+import { ResumeDownLink } from "./ResumeDownLink";
 
 export const Header = () => {
   return (
@@ -12,6 +13,8 @@ export const Header = () => {
       <div className="flex gap-2">
         <ThemeModeChanger />
         <div>{"FE Developer"}</div>
+        {"/"}
+        <ResumeDownLink />
       </div>
     </div>
   );
