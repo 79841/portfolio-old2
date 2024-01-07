@@ -3,19 +3,23 @@ import React from "react";
 import { ThemeModeChanger } from "../theme-mode/ThemeModeChanger";
 import Link from "next/link";
 import { ResumeDownLink } from "./ResumeDownLink";
+import { Navigator } from "../navigation";
+import { Logo } from "./Logo";
+import { Profession } from "./Profession";
 
 export const Header = () => {
   return (
-    <div className="mb-8">
-      <h1 className="mb-4 text-4xl">
-        <Link href={navigationLinks.home.path}>{siteMetadata.username}</Link>
-      </h1>
-      <div className="flex gap-2">
-        <ThemeModeChanger />
-        <div>{"FE Developer"}</div>
-        {"/"}
-        <ResumeDownLink />
+    <div className="relative flex w-full flex-row justify-between lg:w-fit lg:flex-col lg:justify-start">
+      <div className="mb-8">
+        <Logo />
+        <div className="flex gap-2 text-nowrap">
+          <ThemeModeChanger />
+          <Profession />
+          {"/"}
+          <ResumeDownLink />
+        </div>
       </div>
+      <Navigator />
     </div>
   );
 };
