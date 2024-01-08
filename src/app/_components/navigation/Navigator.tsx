@@ -15,7 +15,7 @@ export const Navigator = () => {
     <div
       className={cn(
         "absolute right-0 z-50 flex flex-col items-end lg:static lg:right-8 lg:items-start",
-        isVisible && "w-[calc(100%)] bg-background ",
+        isVisible && "w-[calc(100%+1rem)] pb-8 backdrop-blur-sm",
       )}
     >
       <button className="lg:hidden" onClick={handleClick}>
