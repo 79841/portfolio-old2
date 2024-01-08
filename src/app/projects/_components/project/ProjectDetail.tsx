@@ -21,7 +21,7 @@ type TTitleProps = { title: string };
 const Title = ({ title }: TTitleProps) => {
   const router = useRouter();
   return (
-    <h1 className="flex -translate-x-2 items-center text-xl sm:text-2xl">
+    <h1 className="flex items-center text-lg sm:text-2xl">
       <button onClick={() => router.back()}>
         <IoIosArrowBack />
       </button>
