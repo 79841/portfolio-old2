@@ -6,9 +6,9 @@ type TIntroPhraseProps = {
 };
 export const IntroPhrase = ({ content, description }: TIntroPhraseProps) => {
   return (
-    <div className="py-2 flex group items-end flex-col">
-      <div className="text-3xl">{content}</div>
-      <div className="text-right w-0 group-hover:w-full opacity-0 h-0 overflow-hidden text-muted-foreground group-hover:opacity-100 group-hover:h-fit transition-opacity duration-1000">
+    <div className="group flex flex-col items-end py-1 sm:py-2">
+      <div className="text-xl sm:text-3xl">{content}</div>
+      <div className="h-0 w-0 overflow-hidden text-right text-muted-foreground opacity-0 transition-opacity duration-1000 group-hover:h-fit group-hover:w-full group-hover:opacity-100">
         {description}
       </div>
     </div>

@@ -21,7 +21,7 @@ type TTitleProps = { title: string };
 const Title = ({ title }: TTitleProps) => {
   const router = useRouter();
   return (
-    <h1 className="flex -translate-x-2 items-center text-2xl">
+    <h1 className="flex -translate-x-2 items-center text-xl sm:text-2xl">
       <button onClick={() => router.back()}>
         <IoIosArrowBack />
       </button>
@@ -82,14 +82,14 @@ const ProjectImage = ({ imageUrl, style }: TProjectImageProps) => {
 };
 
 const NoImagesBox = () => (
-  <div className="flex h-60 w-full items-center justify-center border border-primary text-2xl text-muted-foreground">
+  <div className="flex h-60 w-full items-center justify-center border border-primary text-xl text-muted-foreground sm:text-2xl">
     No Images
   </div>
 );
 
 type TContentProps = PropsWithChildren;
 const Content = ({ children }: TContentProps) => (
-  <div className="flex flex-col gap-2">{children}</div>
+  <div className="flex flex-col gap-2 text-sm sm:text-base">{children}</div>
 );
 
 type TGithubUrlsProps = {
