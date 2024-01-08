@@ -42,6 +42,8 @@ const ChusinsaPage = () => {
             hydration 과정에서 발생하는 에러를 처리
           </TextHighlighter>
           하면서 Nextjs의 동작 원리를 깊게 다지고 가는 계기가 되었습니다.
+        </div>
+        <div>
           백엔드에서는 OAuth2 인증방식을 직접 구현하였고 쿠키를 통한 인증을
           자동화하기 위해{" "}
           <TextHighlighter>FastAPI OAuth2 상속받아 의존성 주입</TextHighlighter>
