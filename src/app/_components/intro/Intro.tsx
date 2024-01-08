@@ -1,10 +1,10 @@
 "use client";
-import React from "react";
+import React, { memo } from "react";
 import { IntroPhrase } from "./IntroPhrase";
 import { introPhrases } from "./constants";
 import { useStaggerRisingBoxes } from "@/hooks/useStaggerRisingBoxes";
 
-export const Intro = () => {
+export const Intro = memo(function Intro() {
   const [scope, BoxWrapper] = useStaggerRisingBoxes();
   return (
     <div ref={scope}>
@@ -15,4 +15,4 @@ export const Intro = () => {
       ))}
     </div>
   );
-};
+});

@@ -14,7 +14,7 @@ export const useStaggerRisingBoxes = () => {
     );
   }, [animate]);
   const BoxWrapper = ({ children }: PropsWithChildren) => (
-    <div className="rising-box translate-y-ful">{children}</div>
+    <div className="rising-box translate-y-[50%] opacity-0">{children}</div>
   );
   return [scope, BoxWrapper] as const;
 };
