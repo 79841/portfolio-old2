@@ -2,18 +2,18 @@ import type { Metadata } from "next";
 import "./globals.css";
 import { ThemeProvider } from "./_components/theme-mode/ThemeProvider";
 import { siteMetadata } from "@/data";
-import { Roboto_Mono, Ubuntu } from "next/font/google";
+import { Nanum_Gothic_Coding, Roboto_Mono } from "next/font/google";
 import { MainLayout } from "./_components/layout";
-
-const ubuntu = Ubuntu({
-  display: "swap",
-  subsets: ["latin"],
-  weight: "400",
-});
 
 const nanum_pen_script = Roboto_Mono({
   subsets: ["latin"],
   display: "swap",
+  weight: "400",
+});
+
+const nanum_gothic_coding = Nanum_Gothic_Coding({
+  display: "swap",
+  subsets: ["latin"],
   weight: "400",
 });
 
@@ -38,7 +38,9 @@ export default function RootLayout({
 }) {
   return (
     <html lang={siteMetadata.language}>
-      <body className={`${ubuntu.className} ${nanum_pen_script.className}`}>
+      <body
+        className={`${nanum_pen_script.className} ${nanum_gothic_coding.className} `}
+      >
         <ThemeProvider attribute="class" enableSystem disableTransitionOnChange>
           <MainLayout>{children}</MainLayout>
         </ThemeProvider>
