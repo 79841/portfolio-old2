@@ -3,7 +3,6 @@ import { projectsData } from "@/data";
 import React from "react";
 import { ProjectDetail } from "../_components/project";
 import { TextHighlighter } from "@/components/text-highlighter";
-import Image from "next/image";
 
 const ChusinsaPage = () => {
   const project = projectsData.chusinsa;
@@ -20,19 +19,6 @@ const ChusinsaPage = () => {
           등을 종합하여 개인에게 의류를 추천해 주는 쇼핑몰 입니다. 5명이서
           진행한 프로젝트로 쇼핑몰의 프론트엔드와 백엔드의 전반적인 개발을
           맡았습니다.
-        </div>
-        <div>
-          아래 그림과 같이 대규모 온라인 쇼핑몰에서 상품과 리뷰 등 학습을 위한
-          데이터를 크롤링하고 가공된 데이터를 제공하는 API 서버와 쇼핑몰을
-          제작했습니다.
-        </div>
-        <div className="relative h-48">
-          <Image
-            src={"/images/projects/chusinsa/chusinsa_architecture.avif"}
-            alt={"chusinsa architecture"}
-            fill
-            className="object-contain"
-          />
         </div>
         <div>
           백엔드는 ML 엔지니어와 협업을 위해 파이썬 웹 프레임워크인 FastAPI를

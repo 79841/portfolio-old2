@@ -3,7 +3,6 @@ import { projectsData } from "@/data";
 import React from "react";
 import { ProjectDetail } from "../_components/project";
 import { TextHighlighter } from "@/components/text-highlighter";
-import Image from "next/image";
 
 const PortfolioPage = () => {
   const project = projectsData.portfolio;
@@ -34,22 +33,6 @@ const PortfolioPage = () => {
           <TextHighlighter>priority를 지정하여 빠르게 로드</TextHighlighter>
           하도록 했습니다. 그 밖에도 CSS 등 여러 최적화를 진행하여 light house
           기준 모바일 성능 94점, 데스크탑 성능 100점을 달성하였습니다.
-        </div>
-        <div className="flex justify-center gap-4">
-          <div className="relative h-44 w-32 border border-primary">
-            <Image
-              src={"/images/projects/portfolio/mobile_lighthouse.avif"}
-              fill
-              alt="lighthouse mobile"
-            />
-          </div>
-          <div className="relative h-44 w-32 border border-primary">
-            <Image
-              src={"/images/projects/portfolio/desktop_lighthouse.avif"}
-              fill
-              alt="lighthouse desktop"
-            />
-          </div>
         </div>
         <div>
           페이지 접근성을 위해{" "}
