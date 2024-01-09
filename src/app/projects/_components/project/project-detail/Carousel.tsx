@@ -26,6 +26,7 @@ export const Carousel = ({ images, imageWidth }: TImagesProps) => {
                 } * ${i})`,
                 width: imageWidth,
                 zIndex: isSelected ? "50" : `${10 - i}`,
+                transform: isSelected ? "scale(1.1)" : "",
               };
               return (
                 <div key={imageUrl} onClick={() => setCurrentIndex(i)}>
@@ -34,7 +35,7 @@ export const Carousel = ({ images, imageWidth }: TImagesProps) => {
               );
             })}
           </div>
-          <div className="flex items-center">
+          <div className="flex items-center pt-2">
             {Array.from({ length: images.length }).map((_, i) => (
               <div
                 key={i}
