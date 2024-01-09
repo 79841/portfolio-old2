@@ -8,7 +8,7 @@ import { Carousel } from "./Carousel";
 type TProjectDetailProps = PropsWithChildren;
 export const ProjectDetail = ({ children }: TProjectDetailProps) => {
   return (
-    <div className="flex w-[40rem] animate-show-up flex-col items-start gap-4 overflow-scroll opacity-0 scrollbar-hide lg:mt-32 lg:h-[calc(100%-8rem)]">
+    <div className="flex h-full w-full max-w-[50rem] animate-show-up flex-col items-start gap-8 overflow-scroll opacity-0 scrollbar-hide sm:pl-8">
       {children}
     </div>
   );
@@ -21,8 +21,8 @@ type TTitleProps = { title: string };
 const Title = ({ title }: TTitleProps) => {
   const router = useRouter();
   return (
-    <h1 className="flex items-center text-lg sm:text-2xl">
-      <button onClick={() => router.back()}>
+    <h1 className="flex items-center gap-2 text-lg sm:text-2xl">
+      <button className="border border-primary" onClick={() => router.back()}>
         <IoIosArrowBack />
       </button>
       {title}
@@ -37,7 +37,7 @@ const Description = ({ description }: TDescriptionProps) => (
 
 type TContentProps = PropsWithChildren;
 const Content = ({ children }: TContentProps) => (
-  <div className="flex flex-col gap-2 text-sm sm:text-base">{children}</div>
+  <div className="flex flex-col gap-4 text-sm sm:text-base">{children}</div>
 );
 
 type TGithubUrlsProps = {
