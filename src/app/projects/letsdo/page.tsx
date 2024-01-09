@@ -12,7 +12,7 @@ const LetsdoPage = () => {
         <ProjectDetail.Title title={project.name} />
         <ProjectDetail.Description description={project.description} />
       </ProjectDetail.Header>
-      <ProjectDetail.Images images={project.images} imageWidth="9rem" />
+      <ProjectDetail.Carousel images={project.images} imageWidth="9rem" />
       <ProjectDetail.Content>
         <div>
           척수 장애인들에게 건강 관리를 위한 프로젝트를 제공하고 간편하게 상담할

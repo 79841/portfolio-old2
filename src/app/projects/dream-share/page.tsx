@@ -12,7 +12,7 @@ const DreamSharePage = () => {
         <ProjectDetail.Title title={project.name} />
         <ProjectDetail.Description description={project.description} />
       </ProjectDetail.Header>
-      <ProjectDetail.Images images={project.images} imageWidth="9rem" />
+      <ProjectDetail.Carousel images={project.images} imageWidth="9rem" />
       <ProjectDetail.Content>
         <div>
           꿈 일기를 작성하여 의미를 분석하고 공유하는 앱입니다. 3인 프로젝트로

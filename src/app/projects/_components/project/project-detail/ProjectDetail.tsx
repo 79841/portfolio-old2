@@ -1,10 +1,10 @@
 "use client";
-import { TProjectData } from "@/types/Project";
-import Image from "next/image";
+import { TProjectData } from "@/types";
 import Link from "next/link";
 import { useRouter } from "next/navigation";
 import React, { PropsWithChildren } from "react";
 import { IoIosArrowBack, IoLogoGithub } from "react-icons/io";
+import { Carousel } from "./Carousel";
 type TProjectDetailProps = PropsWithChildren;
 export const ProjectDetail = ({ children }: TProjectDetailProps) => {
   return (
@@ -33,58 +33,6 @@ const Title = ({ title }: TTitleProps) => {
 type TDescriptionProps = { description: string };
 const Description = ({ description }: TDescriptionProps) => (
   <div className="text-muted-foreground">{description}</div>
-);
-
-type TImagesProps = {
-  images: TProjectData["images"];
-  imageWidth: string;
-};
-const Images = ({ images, imageWidth }: TImagesProps) => {
-  return (
-    <div className="flex w-full justify-center">
-      {images.length > 0 ? (
-        <div className="relative h-60 w-full">
-          {images.reverse().map((imageUrl, i) => {
-            const style = {
-              left: `calc((40rem - ${imageWidth}) / ${images.length - 1} * ${
-                images.length - 1 - i
-              })`,
-              width: imageWidth,
-            };
-            return (
-              <ProjectImage key={imageUrl} style={style} imageUrl={imageUrl} />
-            );
-          })}
-        </div>
-      ) : (
-        <NoImagesBox />
-      )}
-    </div>
-  );
-};
-
-type TProjectImageProps = {
-  imageUrl: string;
-  style: React.CSSProperties;
-};
-const ProjectImage = ({ imageUrl, style }: TProjectImageProps) => {
-  return (
-    <div key={imageUrl} className={"absolute h-60 hover:z-50"} style={style}>
-      <Image
-        src={imageUrl}
-        alt={imageUrl.slice(imageUrl.lastIndexOf("."))}
-        fill
-        priority
-        className="shadow-x"
-      />
-    </div>
-  );
-};
-
-const NoImagesBox = () => (
-  <div className="flex h-60 w-full items-center justify-center border border-primary text-xl text-muted-foreground sm:text-2xl">
-    No Images
-  </div>
 );
 
 type TContentProps = PropsWithChildren;
@@ -134,7 +82,7 @@ const Date = ({ date }: TDateProps) => (
 ProjectDetail.Header = Header;
 ProjectDetail.Title = Title;
 ProjectDetail.Description = Description;
-ProjectDetail.Images = Images;
+ProjectDetail.Carousel = Carousel;
 ProjectDetail.Content = Content;
 ProjectDetail.GithubUrls = GithubUrls;
 ProjectDetail.TechStack = TechStack;

@@ -13,7 +13,7 @@ const PortfolioPage = () => {
         <ProjectDetail.Title title={project.name} />
         <ProjectDetail.Description description={project.description} />
       </ProjectDetail.Header>
-      <ProjectDetail.Images images={project.images} imageWidth="20rem" />
+      <ProjectDetail.Carousel images={project.images} imageWidth="20rem" />
       <ProjectDetail.Content>
         <div>
           직접 개발한 포트폴리오 사이트 입니다. 현재는 사용하지 않지만 제작

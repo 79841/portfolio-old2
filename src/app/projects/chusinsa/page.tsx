@@ -13,7 +13,7 @@ const ChusinsaPage = () => {
         <ProjectDetail.Title title={project.name} />
         <ProjectDetail.Description description={project.description} />
       </ProjectDetail.Header>
-      <ProjectDetail.Images images={project.images} imageWidth="24rem" />
+      <ProjectDetail.Carousel images={project.images} imageWidth="24rem" />
       <ProjectDetail.Content>
         <div>
           현재 존재하는 온라인 의류 쇼핑몰의 구매 이력, 상품 클릭 여부, 나이

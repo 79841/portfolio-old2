@@ -12,7 +12,7 @@ const SecurityGymPage = () => {
         <ProjectDetail.Title title={project.name} />
         <ProjectDetail.Description description={project.description} />
       </ProjectDetail.Header>
-      <ProjectDetail.Images images={project.images} imageWidth="100%" />
+      <ProjectDetail.Carousel images={project.images} imageWidth="100%" />
       <ProjectDetail.Content>
         <div>
           기업에 침해사고 발생시{" "}
